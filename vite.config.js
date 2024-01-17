@@ -4,7 +4,8 @@ import vue from '@vitejs/plugin-vue'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base: '/space-tourism-vue/',
-  publicPath: '/space-tourism-vue/',
+  base: 'https://breynersmith.github.io/space-tourism-vue',
+  publicDir: 'public',
+  assetsDir: 'assets',
 
 })
