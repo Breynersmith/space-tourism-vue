@@ -107,7 +107,7 @@ onMounted(() => {
             <Header />
         </div>
         <div 
-        class="text-white ">
+        class="text-white animacion">
             <h1 
             class="text-center font-barlow-condensed text-[1rem] uppercase tabletxs:text-left tabletxs:ml-[4rem]"><span>00</span> Meet your crew</h1>
 
@@ -278,5 +278,17 @@ onMounted(() => {
     opacity: 0.8;
     scale: 1.5;
     transition: all 1s ease-in-out;
+}
+
+.animacion {
+    animation: animacion 1s ease-in-out  ;
+}
+@keyframes animacion {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 </style>

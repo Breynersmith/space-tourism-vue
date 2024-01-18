@@ -75,7 +75,7 @@
         <div>
             <Header />
         </div>
-        <div class="text-white flex flex-col  overflow-hidden">
+        <div class="text-white flex flex-col  overflow-hidden animacion">
             <h1 class="text-center font-barlow-condensed text-[1rem] uppercase tabletxs:text-left  tabletxs:ml-[5rem]"><span>03</span> Space launch 101</h1>
 
             <div class="flex flex-col tabletxs:flex-row tabletxs:mt-[5rem] desktopmd:flex-wrap">
@@ -234,5 +234,18 @@
         background-repeat: no-repeat;
         opacity: 0.8;
         transition: all 1s ease-in-out;
+    }
+
+
+    .animacion {
+        animation: animacion 1s ease-in-out  ;
+    }
+    @keyframes animacion {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 </style>

@@ -27,7 +27,7 @@ onBeforeMount(() => {
         <div>
             <Header />
         </div>
-        <div class="desktopxs:flex desktopxs:items-center  h-[">
+        <div class="desktopxs:flex desktopxs:items-center  transition">
             <div class="text-white text-center px-6 mb-14 desktopxs:w-[50%] ">
                 <h5 class="uppercase font-barlow-condensed space-x-[4.75] -mb-3 desktopxs:mt-28 text-[1.2rem]">So, you want to travel to</h5>
                 <h1 class="font-bellefair uppercase text-[4rem] tabletxs:text-[6rem] mt-2  font-[400] desktopxs:text-[8rem] text-[#D0D6F9]">Space</h1>
@@ -139,4 +139,16 @@ button:hover {
 	}
 }
 
+.transition {
+    animation: opacity 2s ease-out;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 </style>
