@@ -22,23 +22,44 @@
     /*----------------------------------*/
     import dataJson from '../data.json'
     const dataTech = ref(dataJson.technology)
-    const currentImage = ref(dataJson.technology[0].images.url)
     let isActive = ref(0)
-    let imageClass = reactive({
-        value: ''
-    });
-    const showImage = (imageUrl, index) => {
-        isActive.value = index
-        currentImage.value = imageUrl
-        imageClass.value = `image-${index}`
-        setTimeout(() => {
-            imageClass.value = ''
-        }, 1000)
+    let name = ref(dataTech.value[0].name)
+    let description = ref(dataTech.value[0].description)
+
+    let technologyOne = ref(false)
+    let technologyTwo = ref(false)
+    let technologyThree = ref(false)
+    
 
 
+    const showone = () => {
+        name.value = dataTech.value[0].name
+        description.value = dataTech.value[0].description
+        isActive.value = true
+        technologyOne.value = true
+        technologyTwo.value = false
+        technologyThree.value = false
+    }
+
+    const showtwo = () => {
+        name.value = dataTech.value[1].name
+        description.value = dataTech.value[1].description
+        isActive.value = true
+        technologyOne.value = false
+        technologyTwo.value = true
+        technologyThree.value = false
+    }
+
+    const showthree = () => {
+        name.value = dataTech.value[2].name
+        description.value = dataTech.value[2].description
+        isActive.value = true
+        technologyOne.value = false
+        technologyTwo.value = false
+        technologyThree.value = true
     }
     onMounted(() => {
-        showImage(dataJson.technology[0].images.url, 0)
+        technologyOne.value = true
     })
 
 
@@ -61,27 +82,29 @@
                 
                 
                 <div 
-                :class="imageClass"
-                class="flex  w-[100%] h-[25%] tabletxs:w-[12rem] desktopmd:w-[15rem] desktopmd:h-[15rem] tabletxs:h-[12rem]  mx-auto box-img mt-8 ] tabletxs:order-2 tabletxs:rounded-full tabletxs:overflow-hidden">
-                    <img  class="w-full img object-cover opacity-85  tabletxs:w-[100%]" v-if="currentImage" :src="currentImage"
-                        :alt="dataTech[isActive].name">
+                :class="{'technologyOne' : technologyOne, 'technologyTwo' : technologyTwo, 'technologyThree' : technologyThree}"
+                class="flex  w-[100%] h-[13rem] tabletxs:w-[12rem] desktopmd:w-[15rem] desktopmd:h-[15rem] tabletxs:h-[12rem]  mx-auto box-img mt-8 ] tabletxs:order-2 tabletxs:rounded-full tabletxs:overflow-hidden">
+                    
                  </div>
 
                 <div class="flex order-1 flex-row tabletxs:flex-col tabletxs:w-[10%] justify-center items-center gap-4 mt-2 tabletxs:ml-[1rem] desktopmd:w-[100%] desktopmd:flex-row desktopmd:order-2 desktopmd:mt-[3rem]">
 
                     <button 
+                    :class="isActive ? 'active' : ''"
                     class="w-9 h-9  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-xs font-barellow-condensed font-bold"
-                        @click="showImage(dataTech[0].images.url, dataTech[0].index)">
+                        @click="showone">
                         1
                     </button>
                     <button 
+                    :class="isActive ? 'active' : ''"
                     class="w-9 h-9  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-xs font-barellow-condensed font-bold"
-                        @click="showImage(dataTech[1].images.url, dataTech[1].index)">
+                        @click="showtwo">
                         2
                     </button>
                     <button 
+                    :class="isActive ? 'active' : ''"
                     class="w-9 h-9  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-xs font-barellow-condensed font-bold"
-                        @click="showImage(dataTech[2].images.url, dataTech[2].index)">
+                        @click="showthree">
                         3
                     </button>
 
@@ -93,10 +116,10 @@
 
                     <p class="text-[.8rem]">The terminology...</p>
 
-                    <h1 class="uppercase font-bellefair text-[1.4rem] desktopmd:text-[2.5rem] text-[#D0D6F9] text-center">{{ dataTech[isActive].name }}
+                    <h1 class="uppercase font-bellefair text-[1.4rem] desktopmd:text-[2.5rem] text-[#D0D6F9] text-center">{{ name }}
                     </h1>
 
-                    <p :class="imageClass" class="order-3 text-[.8rem] desktopmd:text-[1rem] mb-4 mt-4 px-[8%]">{{ dataTech[isActive].description }}
+                    <p :class="imageClass" class="order-3 text-[.8rem] desktopmd:text-[1rem] mb-4 mt-4 px-[8%]">{{ description }}
                     </p>
                 </div>
 
@@ -184,5 +207,32 @@
         background-size: cover;
         transition: background-size 5s ease-out;
         animation: girar 15s ease-in-out infinite alternate; 
+    }
+
+    .technologyOne {
+        background-image: url(../assets/technology/image-launch.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        transition: all 1s ease-in-out;
+
+    }
+    .technologyTwo {
+        background-image: url(../assets/technology/image-spaceport-portrait.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+
+        transition: all 1s ease-in-out;
+    }
+    .technologyThree {
+        background-image: url(../assets/technology/image-space-capsule-portrait.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.8;
+        transition: all 1s ease-in-out;
     }
 </style>
