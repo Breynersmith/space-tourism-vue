@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [ solution : ](https://github.com/Breynersmith/space-tourism-vue)
-- Live Site URL: [live :](https://breynersmith.github.io/space-tourism-vue/destinations)
+- Live Site URL: [live :](https://breynersmith.github.io/space-tourism-vue/)
 
 ## My process
 
