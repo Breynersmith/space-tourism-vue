@@ -75,7 +75,7 @@
         <div>
             <Header />
         </div>
-        <div class="text-white flex flex-col  overflow-hidden animacion">
+        <div class="text-white flex flex-col  overflow-hidden animacion mb-8">
             <h1 class="text-center font-barlow-condensed text-[1rem] uppercase tabletxs:text-left  tabletxs:ml-[5rem]"><span>03</span> Space launch 101</h1>
 
             <div class="flex flex-col tabletxs:flex-row tabletxs:mt-[5rem] desktopmd:flex-wrap">
@@ -83,7 +83,7 @@
                 
                 <div 
                 :class="{'technologyOne' : technologyOne, 'technologyTwo' : technologyTwo, 'technologyThree' : technologyThree}"
-                class="flex  w-[100%] h-[13rem] tabletxs:w-[12rem] desktopmd:w-[15rem] desktopmd:h-[15rem] tabletxs:h-[12rem]  mx-auto box-img mt-8 ] tabletxs:order-2 tabletxs:rounded-full tabletxs:overflow-hidden">
+                class="flex  w-[100%] h-[10rem] tabletxs:w-[12rem] desktopmd:w-[15rem] desktopmd:h-[15rem] tabletxs:h-[12rem]  mx-auto box-img mt-8 ] tabletxs:order-2 tabletxs:rounded-full tabletxs:overflow-hidden">
                     
                  </div>
 
@@ -91,19 +91,19 @@
 
                     <button 
                     :class="isActive ? 'active' : ''"
-                    class="w-9 h-9  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-xs font-barellow-condensed font-bold"
+                    class="w-6 h-6  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-base font-barellow-condensed font-bold text-black "
                         @click="showone">
                         1
                     </button>
                     <button 
                     :class="isActive ? 'active' : ''"
-                    class="w-9 h-9  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-xs font-barellow-condensed font-bold"
+                    class="w-6 h-6  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-base text-black font-barellow-condensed font-bold"
                         @click="showtwo">
                         2
                     </button>
                     <button 
                     :class="isActive ? 'active' : ''"
-                    class="w-9 h-9  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-xs font-barellow-condensed font-bold"
+                    class="w-6 h-6  border-2 border-[#D0D6F9] hover:opacity-100 rounded-full text-base text-black  font-barellow-condensed font-bold"
                         @click="showthree">
                         3
                     </button>

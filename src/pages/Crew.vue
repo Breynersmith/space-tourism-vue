@@ -119,13 +119,13 @@ onMounted(() => {
                     <h2 
                     class="uppercase font-bellefair text-[.8rem] desktopmd:text-[1rem] opacity-50">{{ role }}</h2>
                 <h3 
-                class="uppercase font-bellefair text-[1.5rem] text-[#D0D6F9] desktopmd:text-[2rem]">{{ name }}</h3>
+                class="uppercase -mt-4 font-bellefair text-[1.5rem] text-[#D0D6F9] desktopmd:text-[2rem]">{{ name }}</h3>
                 </div>
                 <p class="text-[.8rem] mb-4 mt-4 desktopmd:text-[1rem]">{{ bio }}</p>
             </div>
 
             <div 
-                class="w-full flex flex-row tabletxs:flex-col  justify-center items-center gap-4 mt-4 order-3 absolute top-[90%] tabletxs:relative tabletxs:-mt-[0rem] tabletmd:mt-[0rem] tabletxs:-ml-[5rem] tabletmd:-ml-[10rem] desktopmd:flex-row desktopmd:absolute desktopmd:top-[80%]">
+                class="w-full flex flex-row tabletxs:flex-col  justify-center items-center gap-4 mt-8 order-3 absolute top-[90%] tabletxs:relative tabletxs:-mt-[0rem] tabletmd:mt-[0rem] tabletxs:-ml-[5rem] tabletmd:-ml-[10rem] desktopmd:flex-row desktopmd:absolute desktopmd:top-[80%]">
 
                 <button  
                         class="w-4 h-4 opacity-30 bg-[#D0D6F9] hover:opacity-100 rounded-full"
@@ -155,7 +155,7 @@ onMounted(() => {
             <div class="order-2 w-[12rem] tabletxs:w-[60%] desktopmd:w-[37%]  mx-auto box-img ">
                 <div
                 :class="{'douglas' : douglas, 'mark': mark, 'viktor': viktor, 'anousheh' : anousheh }"
-                class="tebletxs:w-[100%] desktopmd:w-[15rem] desktopmd:h-[18rem]  desktopmd:mt-8">
+                class="w-[8rem] h-[8rem] mx-auto mt-12 tebletxs:w-[100%] desktopmd:w-[15rem] desktopmd:h-[18rem]  desktopmd:mt-8">
                   
                 </div>
                     

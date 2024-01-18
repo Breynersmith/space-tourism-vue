@@ -102,7 +102,7 @@
                     <span>01</span> Pick your destination</h1>
                 <div class="tabletxs:flex">
                     <div :class="{ 'isMoon': isMoon, 'isEuropa': isEuropa, 'isTitan': isTitan, 'isMars': isMars }"
-                        class="w-[18rem] h-[18rem] mt-4 mx-auto mb-16  rounded-full">
+                        class="w-[6rem] h-[6rem] tabletmd:w-[12rem] tabletmd:h-[12rem] desktopmd:w-[20rem] desktopmd:h-[20rem] mt-4 mx-auto mb-16  rounded-full">
     
                     </div>
     
